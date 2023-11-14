@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Traversing and Accessing Element in Array</title>
+  </head>
+  <body>
+    <h1>Traversing and Accessing Element in Array</h1>
+    <!-- Access Element with text input and button -->
+    <input type="text" id="element" />
+    <button onclick="getElement()">Get Element</button>
+  </body>
+  <script>
+    // Traversing
+    const data = [10, 24, 36, 49, 56, 60, 77, 88, 90, 92, 99];
+    for (let i = -1; i < data.length; i++) {
+      document.write(`Array element of index ${i} is ${data[i]}<br>`);
+    }
+    // Accessing the elements of Array
+    let x = 8;
+    document.write(data[x]);
+    // console.log(data[3]);
+
+    function getElement() {
+      const element = document.getElementById("element").value;
+      // Validation
+      if (element < data.length && element >= 0) {
+        alert(data[element]);
+      } else {
+        alert("Invalid Index");
+      }
+    }
+  </script>
+</html>
